@@ -4,7 +4,7 @@ if __name__ == "__main__":
     if len(argv) < 2:
         print("0 arguments.")
     else:
-        print(f"{len(argv) - 1} arguments:")
+        print("{} arguments:".format(len(argv) - 1))
         for i in range(1,len(argv)):
-            print(f"{i:} {argv[i]}")
+            print("{0}: {1}".format(i, argv[i]))
 
