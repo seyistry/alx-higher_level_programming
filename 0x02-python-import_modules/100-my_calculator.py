@@ -10,12 +10,14 @@ if __name__ == "__main__":
             print("Unknown operator. Available operators: +, -, * and /")
             exit(1)
         else:
+            a = int(argv[1])
+            b = int(argv[3])
             if argv[2] == '+':
-                print(f"{argv[1]} {argv[2]} {argv[3]} = {add(int(argv[1]), int(argv[3]))}")
+                print(f"{a} {argv[2]} {b} = {add(a, b)}")
             if argv[2] == '-':
-                print(f"{argv[1]} {argv[2]} {argv[3]} = {sub(int(argv[1]), int(argv[3]))}")
+                print(f"{a} {argv[2]} {b} = {sub(a, b)}")
             if argv[2] == '*':
-                print(f"{argv[1]} {argv[2]} {argv[3]} = {mul(int(argv[1]), int(argv[3]))}")
+                print(f"{a} {argv[2]} {b} = {mul(a, b)}")
             if argv[2] == '/':
-                print(f"{argv[1]} {argv[2]} {argv[3]} = {div(int(argv[1]), int(argv[3]))}")
+                print(f"{a} {argv[2]} {b} = {div(a, b)}")
             exit(0)
