@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
-    return(sentence[0], len(sentence))
+    return(len(sentence), sentence[0])
