@@ -13,6 +13,7 @@ def check_tuple(tuple_x=()):
         x = tuple(new_tup[:2])
         return x
 
+
 def add_tuple(tuple_a=(), tuple_b=()):
     x = check_tuple(tuple_a)
     y = check_tuple(tuple_b)
