@@ -70,4 +70,4 @@ class Square:
         for i in range(self.__position[1]):
             print()
         for i in range(self.__size):
-            print(f"{'_' * self.__position[0]}{'#' * self.__size}")
+            print(f"{' ' * self.__position[0]}{'#' * self.__size}")
