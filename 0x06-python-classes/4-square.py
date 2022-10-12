@@ -9,7 +9,7 @@ class Square:
         """ __init__ nethod to initialize the size of square
         """
         self.__size = size
-    
+
     @property
     def size(self):
         """ setter size nethod to initialize the size of square
