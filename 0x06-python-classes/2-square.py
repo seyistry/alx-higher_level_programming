@@ -5,11 +5,11 @@
 class Square:
     """ class Square that defines a square
     """
-    def __init__(self, size=0: int):
-        """ initialize the size of square
+    def __init__(self, size=0):
+        """ __init__ nethod to initialize the size of square
 
         Args:
-            size: size of square
+            size (int): size of square
 
         Raises:
             TypeError: if `size` is not an integer
