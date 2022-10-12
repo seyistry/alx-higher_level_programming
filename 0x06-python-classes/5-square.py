@@ -19,14 +19,11 @@ class Square:
     @size.setter
     def size(self, value):
         """ setter size nethod to initialize the size of square
-
         Args:
             value (int): size of square
-
         Raises:
             TypeError: if `size` is not an integer
             ValueError: If `size` is less than 0.
-
         """
         self.__size = value
         if type(self.__size) is not int:
@@ -37,13 +34,12 @@ class Square:
     def area(self):
         """ A class method area that calculate
         the area of a square
-
         Returns:
             int: return the square of size
         """
         return self.__size * self.__size
 
     def my_print(self):
-        if self__size > 0:
+        if self.__size > 0:
             for i in range(self.__size):
                 print("#" * self.__size)
