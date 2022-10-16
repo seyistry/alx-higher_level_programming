@@ -1,0 +1,63 @@
+===============================
+ How to Use 3-say_my_name.py
+===============================
+
+This library is very simple, since it only has one function called
+``say_my_name()``.
+
+Testing basic divisions
+=======================
+
+``say_my_name()`` that print first name and last name.
+
+::
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name("John", "Smith")
+    My name is John Smith
+    >>> say_my_name("Walter", "White")
+    My name is Walter White
+    >>> say_my_name("Henry")
+    My name is Henry 
+
+Handling errors.
+
+::
+
+    >>> say_my_name(12, "White")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+    >>> say_my_name("Dupe", None)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+    >>> say_my_name(None)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+
+it also checks for string which are Numeric value.
+
+::
+
+    >>> say_my_name("12", "Luke")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+    >>> say_my_name("Dada", "13")
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+    >>> say_my_name("20", "13")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+
+Test positional arguments.
+==========================
+
+::
+
+    >>> say_my_name("John", "Smith", "Bush")
+    Traceback (most recent call last):
+    TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+    >>> say_my_name()
+    Traceback (most recent call last):
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
