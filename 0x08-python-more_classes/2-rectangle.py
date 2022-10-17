@@ -81,4 +81,6 @@ class Rectangle:
         Returns:
             int: the parameter of rectangle
         """
+        if area() == 0:
+            return 0
         return 2 * (self.width + self.height)
