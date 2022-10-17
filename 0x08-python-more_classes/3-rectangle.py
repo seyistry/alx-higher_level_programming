@@ -92,9 +92,10 @@ class Rectangle:
             str: docstring
         """
         rec_diagram = ""
-        for i in range(self.height):
-            if i == (self.height - 1):
-                rec_diagram += ('#' * self.width)
-            else:
-                rec_diagram += ('#' * self.width) + "\n"
+        if not (0 in [self.height, self.width]):
+            for i in range(self.height):
+                if i == (self.height - 1):
+                    rec_diagram += ('#' * self.width)
+                else:
+                    rec_diagram += ('#' * self.width) + "\n"
         return rec_diagram
