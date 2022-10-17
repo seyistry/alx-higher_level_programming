@@ -6,6 +6,8 @@
 class Rectangle:
     """ class Rectangle that defines a Rectangle
     """
+    number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """Instantiate with width and height
@@ -18,6 +20,7 @@ class Rectangle:
         """
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -84,3 +87,25 @@ class Rectangle:
         if 0 in [self.height, self.width]:
             return 0
         return 2 * (self.width + self.height)
+
+    def __str__(self):
+        """func docstring
+
+        Returns:
+            str: docstring
+        """
+        rec_diagram = ""
+        if not (0 in [self.height, self.width]):
+            for i in range(self.height):
+                if i == (self.height - 1):
+                    rec_diagram += (str(self.print_symbol) * self.width)
+                else:
+                    rec_diagram += (str(self.print_symbol) * self.width) + "\n"
+        return rec_diagram
+
+    def __repr__(self):
+        return (f"Rectangle({self.width}, {self.height})")
+
+    def __del__(self):
+        Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
