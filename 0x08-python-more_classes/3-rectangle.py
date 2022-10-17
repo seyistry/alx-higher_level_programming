@@ -91,7 +91,6 @@ class Rectangle:
         Returns:
             str: docstring
         """
-        print(f"Area: {self.area()} - Perimeter: {self.perimeter()}")
         for i in range(self.height - 1):
             print(f"{'#' * self.width}")
         return f"{'#' * self.width}"
