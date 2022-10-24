@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""A simple function to return attr and methods
+"""
+
 
 def lookup(obj):
     """returns the list of available attributes
