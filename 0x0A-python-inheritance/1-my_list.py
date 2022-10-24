@@ -11,6 +11,10 @@ class MyList(list):
             list (_type_): Base Class
     """
 
+    def __init__(self):
+        """"initializes the object"""
+        super().__init__()
+
     def print_sorted(self):
         """print sorted list
 
