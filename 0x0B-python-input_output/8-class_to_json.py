@@ -9,4 +9,12 @@ import json
 
 
 def class_to_json(obj):
+    """covert class to json
+
+    Args:
+        obj (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
     return json.dumps(obj.__dict__)
