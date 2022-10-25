@@ -17,4 +17,4 @@ def class_to_json(obj):
     Returns:
         _type_: _description_
     """
-    return json.dumps(obj.__dict__)
+    return obj.__dict__
