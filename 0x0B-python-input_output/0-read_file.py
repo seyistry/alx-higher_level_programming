@@ -5,6 +5,11 @@
 
 
 def read_file(filename=""):
+    """a function to read file
+
+    Args:
+        filename (str, optional): file name to read.
+    """
     with open(filename, encoding="UTF8") as file:
         output = file.read()
         print(output)
