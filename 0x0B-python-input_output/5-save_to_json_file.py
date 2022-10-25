@@ -8,5 +8,11 @@ import json
 
 
 def save_to_json_file(my_obj, filename):
+    """method to dump json in file
+
+    Args:
+        my_obj (_type_): _description_
+        filename (_type_): _description_
+    """
     with open(filename, 'w', encoding="UTF8") as file:
         json.dump(my_obj, file)
