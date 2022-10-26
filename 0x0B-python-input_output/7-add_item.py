@@ -11,9 +11,7 @@ filename = "add_item.json"
 
 try:
     old_list = load_from_json_file(filename)
-except Exception:
+except FileNotFoundError:
     old_list = []
 
-new_argv = argv[1:]
-
-save_to_json_file(old_list + new_argv, filename)
+save_to_json_file(old_list.extend(argv[1:]), filename)
