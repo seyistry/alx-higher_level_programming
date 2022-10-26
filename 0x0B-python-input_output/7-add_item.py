@@ -11,7 +11,7 @@ filename = "add_item.json"
 
 try:
     old_list = load_from_json_file(filename)
-except:
+except Exception:
     old_list = []
 
 new_argv = argv[1:]
