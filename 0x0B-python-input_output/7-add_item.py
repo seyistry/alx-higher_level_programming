@@ -14,6 +14,6 @@ if __name__ == "__main__":
     try:
         old_list = load_from_json_file(filename)
     except FileNotFoundError:
-        old_list = []
+        save_to_json_file(argv[1:], filename)
 
-    save_to_json_file(old_list + (argv[1:]), filename)
+    # save_to_json_file(old_list + (argv[1:]), filename)
