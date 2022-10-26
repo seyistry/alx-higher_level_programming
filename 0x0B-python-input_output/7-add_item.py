@@ -14,7 +14,6 @@ try:
 except Exception:
     old_list = []
 
-for arguments in argv[1:]:
-    old_list.append(arguments)
+new_argv = argv[1:]
 
-save_to_json_file(old_list, filename)
+save_to_json_file(old_list + new_argv, filename)

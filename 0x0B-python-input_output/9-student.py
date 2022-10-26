@@ -7,8 +7,6 @@
 
 """
 
-import json
-
 
 class Student:
     """A simple class student
