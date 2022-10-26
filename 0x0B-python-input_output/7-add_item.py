@@ -16,4 +16,4 @@ if __name__ == "__main__":
     except FileNotFoundError:
         old_list = []
 
-    save_to_json_file(old_list + argv[1:], filename)
+    save_to_json_file(old_list + (argv[1:]), filename)
