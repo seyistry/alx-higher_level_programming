@@ -17,6 +17,7 @@ class Square(Rectangle):
             id (_type_): _description_. Defaults to None.
         """
         super().__init__(size, size, x, y, id)
+        self.size = size
 
     def __str__(self) -> str:
         return f"[Square] ({self.id}) {self.x}/{self.y}> - {self.width}"
