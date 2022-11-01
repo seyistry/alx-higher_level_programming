@@ -134,7 +134,7 @@ class Rectangle(Base):
                                                        self.width,
                                                        self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """update method
         """
         for i in range(len(args)):
@@ -148,3 +148,16 @@ class Rectangle(Base):
                 self.x = args[i]
             if i == 4:
                 self.y = args[i]
+
+        if len(args) == 0 and kwargs is not None:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                if key == "width":
+                    self.width = value
+                if key == "height":
+                    self.height = value
+                if key == "x":
+                    self.x = value
+                if key == "y":
+                    self.y = value
