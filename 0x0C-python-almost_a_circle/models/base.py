@@ -23,4 +23,12 @@ class Base:
             self.id = Base.__nb_objects
 
     def to_json_string(list_dictionaries):
+        """convert dict to json
+
+        Args:
+            list_dictionaries (dict): _description_
+
+        Returns:
+            dict: json dumps
+        """
         return json.dumps(list_dictionaries)
