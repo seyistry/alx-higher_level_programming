@@ -135,6 +135,8 @@ class Rectangle(Base):
                                                        self.height)
 
     def update(self, *args):
+        """update method
+        """
         for i in range(len(args)):
             if i == 0:
                 super().__init__(args[i])
