@@ -32,5 +32,5 @@ class Base:
             dict: json dumps
         """
         if (list_dictionaries is None) or (len(list_dictionaries) == 0):
-            return '[]'
+            return "[]"
         return json.dumps(list_dictionaries)
