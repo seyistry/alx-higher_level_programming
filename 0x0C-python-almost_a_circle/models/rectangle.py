@@ -133,3 +133,16 @@ class Rectangle(Base):
                                                        self.y,
                                                        self.width,
                                                        self.height)
+
+    def update(self, *args):
+        for i in range(len(args)):
+            if i == 0:
+                super().__init__(args[i])
+            if i == 1:
+                self.width = args[i]
+            if i == 2:
+                self.height = args[i]
+            if i == 3:
+                self.x = args[i]
+            if i == 3:
+                self.y = args[i]
