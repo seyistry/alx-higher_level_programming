@@ -146,5 +146,5 @@ class Rectangle(Base):
                 self.height = args[i]
             if i == 3:
                 self.x = args[i]
-            if i == 3:
+            if i == 4:
                 self.y = args[i]
