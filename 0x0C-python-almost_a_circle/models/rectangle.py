@@ -118,3 +118,9 @@ class Rectangle(Base):
             int: return the product of height and width
         """
         return self.height * self.width
+
+    def display(self):
+        """display area in block
+        """
+        for i in range(self.height):
+            print("#" * self.width)
