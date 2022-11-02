@@ -50,3 +50,17 @@ class Base:
                 file.append(cls.to_dictionary(i))
         with open(file_name, "w") as fp:
             fp.write(cls.to_json_string(file))
+
+    def from_json_string(json_string):
+        """convert from jsonString to dict
+
+        Args:
+            json_string (_type_): _description_
+
+        Returns:
+            object: _description_
+        """
+        if json_string is None:
+            return []
+        else:
+            return json.loads(json_string)
