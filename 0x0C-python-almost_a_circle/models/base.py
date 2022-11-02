@@ -81,13 +81,10 @@ class Base:
         """load from file"""
         filename = cls.__name__ + ".json"
         file = []
-        try:
-            with open(filename, 'r') as fp:
-                file = cls.from_json_string(fp.read())
-            for i, e in enumerate(file):
-                file[i] = cls.create(**file[i])
-        except:
-            pass
+        with open(filename, 'r') as fp:
+            file = cls.from_json_string(fp.read())
+        for i, e in enumerate(file):
+            file[i] = cls.create(**file[i])
         return file
 
     @classmethod
@@ -109,21 +106,18 @@ class Base:
         """load from csv"""
         filename = cls.__name__ + ".csv"
         row = []
-        try:
-            with open(filename, 'r') as csvfile:
-                csv_reader = csv.reader(csvfile)
-                for args in csv_reader:
-                    if cls.__name__ == "Rectangle":
-                        dictionary = {"id": int(args[0]),
-                                      "width": int(args[1]),
-                                      "height": int(args[2]),
-                                      "x": int(args[3]),
-                                      "y": int(args[4])}
-                    elif cls.__name__ == "Square":
-                        dictionary = {"id": int(args[0]), "size": int(args[1]),
-                                      "x": int(args[2]), "y": int(args[3])}
-                    obj = cls.create(**dictionary)
-                    row.append(obj)
-        except:
-            pass
+        with open(filename, 'r') as csvfile:
+            csv_reader = csv.reader(csvfile)
+            for args in csv_reader:
+                if cls.__name__ == "Rectangle":
+                    dictionary = {"id": int(args[0]),
+                                  "width": int(args[1]),
+                                  "height": int(args[2]),
+                                  "x": int(args[3]),
+                                  "y": int(args[4])}
+                elif cls.__name__ == "Square":
+                    dictionary = {"id": int(args[0]), "size": int(args[1]),
+                                  "x": int(args[2]), "y": int(args[3])}
+                obj = cls.create(**dictionary)
+                row.append(obj)
         return row
