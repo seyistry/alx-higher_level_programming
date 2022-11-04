@@ -8,10 +8,9 @@ import io
 import os
 import json
 import pep8
-from models import square
+from models.square import Square
 from models.base import Base
 from contextlib import redirect_stdout
-Square = square.Square
 
 
 class Test_Rectangle_creation(unittest.TestCase):
@@ -104,16 +103,14 @@ class testcases(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             s = Square("fizz")
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            s = Square(False)
-        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             s = Square([1, 3])
 
     def testing_x_typerror(self):
         """testing typerror error for x"""
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             s = Square(1, "fizz")
-        with self.assertRaisesRegex(TypeError, "x must be an integer"):
-            s = Square(1, False)
+        # with self.assertRaisesRegex(TypeError, "x must be an integer"):
+        #     s = Square(1, False)
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             s = Square(3, [1, 3])
 
@@ -121,8 +118,8 @@ class testcases(unittest.TestCase):
         """testing typerror error for y"""
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
             s = Square(1, 3, "fizz")
-        with self.assertRaisesRegex(TypeError, "y must be an integer"):
-            s = Square(1, 2,  False)
+        # with self.assertRaisesRegex(TypeError, "y must be an integer"):
+        #     s = Square(1, 2,  False)
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
             s = Square(3, 4, [1, 3])
 

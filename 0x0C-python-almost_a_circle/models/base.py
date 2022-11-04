@@ -86,7 +86,7 @@ class Base:
                 file = cls.from_json_string(fp.read())
             for i, e in enumerate(file):
                 file[i] = cls.create(**file[i])
-        except FileNotFoundError:
+        except Exception:
             pass
         return file
 
