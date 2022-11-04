@@ -154,7 +154,7 @@ class testcases(unittest.TestCase):
             self.c1.area(1)
 
     def test_display(self):
-        """tesing display aoutput"""
+        """tesing display a output"""
         test = Square(3, 0, 0, 3)
         with io.StringIO() as fi, redirect_stdout(fi):
             self.c1.display()
