@@ -3,7 +3,7 @@
 
 import json
 import csv
-
+import turtle
 
 class Base:
     """Base Class
@@ -124,3 +124,30 @@ class Base:
                 obj = cls.create(**dictionary)
                 row.append(obj)
         return row
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        turtle.speed(1)
+        for i in list_rectangles:
+            turtle.goto(i.x, i.y)
+            turtle.down()
+            for j in range(4):
+                if j % 2 == 0:
+                    turtle.forward(i.width)
+                    turtle.left(90)
+                else:
+                    turtle.forward(i.height)
+                    turtle.left(90)
+            turtle.up()
+
+        for i in list_squares:
+            turtle.goto(i.x, i.y)
+            turtle.down()
+            for j in range(4):
+                if j % 2 == 0:
+                    turtle.forward(i.width)
+                    turtle.left(90)
+                else:
+                    turtle.forward(i.height)
+                    turtle.left(90)
+            turtle.up()
