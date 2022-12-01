@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Test differents behaviors of the Base class
+Test different behaviors of the Base class
 """
 import unittest
 import pep8

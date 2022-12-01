@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Test differents behaviors of the Rectangle Class
+Test different behaviors of the Rectangle Class
 """
 import unittest
 import pep8
