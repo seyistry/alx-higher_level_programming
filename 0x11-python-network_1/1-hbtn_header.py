@@ -9,5 +9,4 @@ from sys import argv
 
 req = Request(argv[1])
 with urlopen(req) as response:
-    body = response.headers['X-Request-Id']
-    print(body)
+    print(response.headers.get('X-Request-Id'))
