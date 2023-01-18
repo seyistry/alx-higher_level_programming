@@ -1,15 +1,12 @@
 #!/usr/bin/python3
-""" script that takes in a URL and an email, sends a POST request
+""" Python script that fetches https://alx-intranet.hbtn.io/status
     """
-if __name__ == "__main__":
-    from urllib.request import Request, urlopen
-    from urllib.parse import urlencode
-    from sys import argv
+from urllib.request import Request, urlopen
 
-    url = argv[1]
-    values = {'email': argv[2]}
-    data = urlencode(values)
-    data = data.encode('utf-8')
-    req = Request(url, data)
-    with urlopen(req) as response:
-        print(response.read().decode('utf-8'))
+req = Request('https://alx-intranet.hbtn.io/status')
+with urlopen(req) as response:
+    body = response.read()
+    print('Body response:')
+    print("\t- type: {}".format(type(body)))
+    print("\t- content: {}".format(body))
+    print("\t- utf8 content: {}".format(body.decode('utf-8')))
