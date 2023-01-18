@@ -3,8 +3,12 @@
     """
 if __name__ == "__main__":
     from urllib.request import Request, urlopen
+    from urllib.parse import urlencode
     from sys import argv
 
-    req = Request(argv[1])
+    url = argv[1]
+    values = {'email': argv[2]}
+    data = urlencode(values).encode('utf-8')
+    req = Request(url, data)
     with urlopen(req) as response:
-        print(response.headers['X-Request-Id'])
+        print(response.read().decode('utf-8'))
