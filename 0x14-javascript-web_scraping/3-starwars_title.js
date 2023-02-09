@@ -7,5 +7,5 @@ request(url, (error, response, body) => {
   if (error) console.error('error:', error);
   // console.log('statusCode:', response && response.statusCode);
   const data = JSON.parse(body);
-  console.log(data.title)
+  console.log(data.title);
 });
