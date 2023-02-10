@@ -10,10 +10,7 @@ request(url, (error, response, body) => {
   const data = JSON.parse(body);
   for (const i in data.results) {
     for (const j in data.results[i].characters) {
-      if (
-        data.results[i].characters[j] ===
-        `https://swapi-api.alx-tools.com/api/people/${id}/`
-      ) {
+      if (data.results[i].characters[j].includes('18')) {
         count = count + 1;
       }
     }
